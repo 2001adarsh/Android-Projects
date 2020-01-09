@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_splash"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/calculator"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:layout_below="@id/img"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="28dp"
+        android:textColor="#434343"
+        android:id="@+id/txt"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Adarsh"
+        android:layout_below="@id/txt"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#434343"
+        android:layout_alignEnd="@id/txt"
+        android:layout_alignRight="@id/txt" />
+
+</RelativeLayout>
