@@ -11,9 +11,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="80dp"
             android:textColor="#A9A9A9"
-            android:text="20 X 50 X 75"
+            android:text=""
             android:padding="2dp"
             android:gravity="right"
             android:layout_marginRight="30dp"
@@ -23,13 +23,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="=250"
+            android:text=""
             android:gravity="right"
             android:textColor="#fff"
             android:layout_gravity="right"
             android:layout_marginRight="30dp"
             android:padding="4dp"
-            android:textSize="70dp"
+            android:textSize="50dp"
             android:textStyle="bold|normal"
             android:id="@+id/ans"
             />
@@ -68,13 +68,13 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:text="+/-"
+                    android:text="@string/delete"
                     android:textSize="35sp"
                     android:textColor="#fff"
                     android:textStyle="bold|normal"
                     android:background="#4ABDAC"
                     android:layout_weight="1"
-                    android:id="@+id/sign"
+                    android:id="@+id/del"
                     />
                 <Button
                     android:layout_width="100dp"
@@ -85,7 +85,7 @@
                     android:textStyle="bold|normal"
                     android:background="#4ABDAC"
                     android:layout_weight="1"
-                    android:id="@+id/percent"
+                    android:id="@+id/rem"
                     />
                 <Button
                     android:layout_width="100dp"
@@ -140,7 +140,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="90dp"
-                    android:text="x"
+                    android:text="*"
                     android:textSize="35sp"
                     android:textColor="#fff"
                     android:textStyle="bold|normal"
