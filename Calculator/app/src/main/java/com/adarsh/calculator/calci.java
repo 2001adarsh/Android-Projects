@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Iterator;
 import java.util.Stack;
@@ -39,6 +40,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "1");
                 input = input+ "1";
@@ -54,6 +56,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "2");
                 input = input+ "2";
@@ -68,6 +71,8 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
+
                 }
                 preview.setText(preview.getText().toString() + "3");
                 input = input+ "3";
@@ -80,6 +85,7 @@ public class calci extends AppCompatActivity {
                 {
                     preview.setText("");
                     ans.setText("");
+                    input="";
                     numbers.clear();
                     operations.clear();
                 }
@@ -96,6 +102,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "5");
                 input = input +"5";
@@ -110,6 +117,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "6");
                 input = input + "6";
@@ -124,6 +132,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "7");
                 input =input+ "7";
@@ -138,6 +147,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "8");
                 input = input+ "8";
@@ -152,6 +162,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="";
                 }
                 preview.setText(preview.getText().toString() + "9");
                 input = input+ "9";
@@ -166,6 +177,7 @@ public class calci extends AppCompatActivity {
                     ans.setText("");
                     numbers.clear();
                     operations.clear();
+                    input="0";
                 }
                 preview.setText(preview.getText().toString() + ".");
                 input = input+ ".";
@@ -268,6 +280,12 @@ public class calci extends AppCompatActivity {
             }
         });
 
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(calci.this, "Work in progress!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
@@ -295,6 +313,7 @@ public class calci extends AppCompatActivity {
 
         preview = (TextView) findViewById(R.id.preview);
         ans = (TextView)findViewById(R.id.ans);
+
     }
 
 
