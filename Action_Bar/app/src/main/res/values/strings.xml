@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Action_Bar</string>
+    <string name="SearchID">Search</string>
+    <string name="LikeID">Like</string>
+    <string name="BookID">Bookmark</string>
+</resources>
