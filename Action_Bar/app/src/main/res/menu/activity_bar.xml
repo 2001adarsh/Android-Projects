@@ -17,6 +17,20 @@
         android:title="@string/BookID"
         app:showAsAction="ifRoom"
         />
-    
+    <item android:id="@+id/locationID"
+        android:icon="@drawable/ic_location_on_black_24dp"
+        android:title="@string/LocationID"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/helpID"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="@string/HelpID"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/refreshID"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:title="@string/RefreshID"
+        app:showAsAction="withText" />
+        <!-- displays text with icon in action bar -->
 
 </menu>

@@ -3,4 +3,10 @@
     <string name="SearchID">Search</string>
     <string name="LikeID">Like</string>
     <string name="BookID">Bookmark</string>
+    <string name="LocationID">My Location</string>
+    <string name="HelpID">Help Needed?</string>
+    <string name="RefreshID">Refresh</string>
+
+    <string name="LocationfoundID">Location_found</string>
+    <string name="SaveID">SaveID</string>
 </resources>
