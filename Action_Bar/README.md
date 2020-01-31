@@ -3,9 +3,9 @@
 Items present:
  - [x] Back Navigation button.
  - [ ] App Icon
- - [ ] View Control
- - [ ] Action Control buttons
- - [ ] Overflow icon and Menu when clicked
+ - [x] View Control
+ - [x] Action Control buttons
+ - [x] Overflow icon and Menu when clicked
  - [ ] Search widget
  - [ ] Tabbed Navigation
  
@@ -53,4 +53,3 @@ Items present:
             android:label="@string/LocationfoundID">
         </activity>
 ```
-   5. 
