@@ -1,0 +1,2 @@
+rootProject.name='Google News App'
+include ':app'
