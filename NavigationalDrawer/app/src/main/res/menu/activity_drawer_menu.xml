@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_item1"
+            android:title="Item 1"
+            android:icon="@drawable/ic_donut_small_black_24dp"/>
+
+        <item android:id="@+id/nav_item2"
+            android:title="Item 2"
+            android:icon="@drawable/ic_donut_small_black_24dp"/>
+
+        <item android:id="@+id/nav_item3"
+            android:title="Item 3"
+            android:icon="@drawable/ic_donut_small_black_24dp"/>
+
+        <item android:id="@+id/nav_item4"
+            android:title="Item 4"
+            android:icon="@drawable/ic_donut_small_black_24dp"/>
+    </group>
+    <group>
+        <item android:id="@+id/nav_item5"
+            android:title="Item 5"/>
+        <item android:id="@+id/nav_item6"
+            android:title="Item 6"/>
+        <item android:id="@+id/nav_item7"
+            android:title="Item 7"/>
+
+        <item android:id="@+id/nav_item8"
+            android:title="Item 8"/>
+        <item android:id="@+id/nav_item9"
+            android:title="Item 9"/>
+    </group>
+    <item android:title="Subtask">
+        <menu>
+            <group>
+                <item android:id="@+id/sub_item1"
+                    android:title="SubItem 1"
+                    android:icon="@drawable/adf_logo"/>
+                <item android:id="@+id/sub_item2"
+                    android:title="SubItem 2"
+                    android:icon="@drawable/adf_logo"/>
+                <item android:id="@+id/sub_item3"
+                    android:title="SubItem 3"
+                    android:icon="@drawable/adf_logo"/>
+            </group>
+        </menu>
+    </item>
+</menu>
