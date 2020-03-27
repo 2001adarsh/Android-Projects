@@ -5,16 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start"
     android:id="@+id/drawer"
     >
 
-    <include layout="@layout/app_bar_dummy"/>
+    <include layout="@layout/app_bar_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav"
-        android:layout_width="300dp"
+        android:layout_width="150dp"
         android:layout_height="match_parent"
         app:headerLayout="@layout/first"
         app:menu="@menu/activity_drawer_menu"
