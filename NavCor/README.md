@@ -121,4 +121,14 @@ Dont forget to **implement NavigationView.OnNavigationItemSelectedListener** (Ca
          //here return false means no item is being selected. So we return true;
      }
 ```
+
+## Adding Lines between Navigational Menus items
+In styles under whatever theme you may be using.
+
+```
+
+<!--        For divider color in navigational Bar-->
+        <item name="android:listDivider">#000</item>
+        
+```
         
