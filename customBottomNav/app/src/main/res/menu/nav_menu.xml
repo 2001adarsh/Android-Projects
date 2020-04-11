@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor = "#fff" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor = "#fff" />
+    <item
+        android:id="@+id/nav_cart"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="Cart"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor = "#fff"/>
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Profile"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="#fff"
+        app:cnb_textColor = "#fff"/>
+</menu>
