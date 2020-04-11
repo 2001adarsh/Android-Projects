@@ -1,3 +1,8 @@
+## Images added:
+
+<kbd><img src="images/1.jpeg" width=200></kbd> 
+
+
 ## Material Styles : 
 ### under Xml file where BottomNavigation is declared.
 -The default Material BottomNavigationView style: consists of updated colors, text sizing, and behavior. The default BottomNavigationView has white background and icons and text colored with colorPrimary.
