@@ -10,6 +10,7 @@
         app:cnb_backgroundColor="#ff785b"
         app:cnb_iconColor="#fff"
         app:cnb_textColor = "#fff" />
+
     <item
         android:id="@+id/nav_search"
         android:icon="@drawable/ic_search_black_24dp"
@@ -17,6 +18,7 @@
         app:cnb_backgroundColor="#ff785b"
         app:cnb_iconColor="#fff"
         app:cnb_textColor = "#fff" />
+
     <item
         android:id="@+id/nav_cart"
         android:icon="@drawable/ic_shopping_cart_black_24dp"
@@ -24,6 +26,7 @@
         app:cnb_backgroundColor="#ff785b"
         app:cnb_iconColor="#fff"
         app:cnb_textColor = "#fff"/>
+
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_account_circle_black_24dp"
