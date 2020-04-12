@@ -45,20 +45,32 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-
+            ViewHolderCourse holder;
             if(view == null) {
                 view = getLayoutInflater().inflate(R.layout.list_resource, viewGroup, false);
+                 holder = new ViewHolderCourse(view);
+                view.setTag(holder);
+            }else{
+                holder = (ViewHolderCourse) view.getTag();
             }
 
-            TextView tvname = view.findViewById(R.id.tv_name);
-            TextView tvuid = view.findViewById(R.id.tv_uid);
             Course course = getItem(i);
 
-            tvname.setText(course.getName());
-            tvuid.setText(course.getUid());
+            holder.tvname.setText(course.getName());
+            holder.tvuid.setText(course.getUid());
 
             return view;
         }
+
+        class ViewHolderCourse{
+            TextView tvname, tvuid;
+            ViewHolderCourse(View view){
+                tvname = view.findViewById(R.id.tv_name);
+                tvuid = view.findViewById(R.id.tv_uid);
+            }
+        }
+
+
     }
 
 }
