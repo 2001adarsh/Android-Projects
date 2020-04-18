@@ -57,6 +57,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
 
     private void setFragment(Fragment fragment){
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.setCustomAnimations(R.anim.slide_from_right, R.anim.slideout_from_left);
         ft.replace(frameLayout.getId(), fragment).commit();
     }
 }
