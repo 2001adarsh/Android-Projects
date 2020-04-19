@@ -32,12 +32,14 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
 
+import static com.adarsh.ecommercepractice.LoginPage.OnResetPasswordFragment;
+
 public class SignInFragment extends Fragment implements View.OnClickListener {
     public SignInFragment() {
         // Required empty public constructor
     }
 
-    TextView DontHaveAcc;
+    TextView DontHaveAcc, forgotPassword;
     FrameLayout frameLayout;
     EditText email, password;
     Button signIn;
@@ -63,6 +65,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
 
         progressBar = view.findViewById(R.id.sign_in_pb);
         mAuth = FirebaseAuth.getInstance();
+        forgotPassword = view.findViewById(R.id.sign_in_forgot);
         return view;
     }
 
@@ -102,6 +105,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
         });
         signIn.setOnClickListener(this);
         closeBut.setOnClickListener(this);
+        forgotPassword.setOnClickListener(this);
 
     }
 
@@ -135,6 +139,10 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                 Intent mainIntent = new Intent(getActivity(), MainActivity.class);
                 startActivity(mainIntent);
                 getActivity().finish();
+            case R.id.sign_in_forgot:
+                OnResetPasswordFragment = true;
+                setFragment(new ResetPasswordFragment());
+                break;
             default: break;
         }
     }
