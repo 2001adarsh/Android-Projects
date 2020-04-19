@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691224674746",
+    "firebase_url": "https://ecommerce-practice-5b823.firebaseio.com",
+    "project_id": "ecommerce-practice-5b823",
+    "storage_bucket": "ecommerce-practice-5b823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691224674746:android:d68405e717d2413e8a5d83",
+        "android_client_info": {
+          "package_name": "com.adarsh.ecommercepractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691224674746-uva2cdccob0f1k28fmsavrncpmk4iqcp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBCnDClJM5mgLtGwA951nVORVgBYqWFYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691224674746-uva2cdccob0f1k28fmsavrncpmk4iqcp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
