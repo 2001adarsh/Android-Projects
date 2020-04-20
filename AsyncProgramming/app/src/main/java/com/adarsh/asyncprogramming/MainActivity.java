@@ -5,6 +5,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -44,12 +46,24 @@ public class MainActivity extends AppCompatActivity {
     button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            waitNsec(4);
-            layout.setBackgroundColor(Color.RED);
+            //waitNsec(4);
+
+            Handler handler = new Handler();
+            Runnable r = new Runnable() {
+                @Override
+                public void run() {
+                    layout.setBackgroundColor(Color.RED);
+                    Log.d(String.valueOf(123), "We have waited 5 sec");
+                }
+            };
+            handler.postDelayed(r,5000);
         }
     });
 
     }
+
+    /* Used to demostrate the disfunctional ability of Main Thread. The other UI components stop
+    in it's runtime.
 
     private void wait1sec(){
         long cur = System.currentTimeMillis();
@@ -60,4 +74,6 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0; i<sec; i++)
             wait1sec();
     }
+    */
+
 }
