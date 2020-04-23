@@ -37,7 +37,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+    //OKHTTP
     implementation "com.squareup.okhttp3:okhttp:4.5.0"
+
+    //GSON for reducing parse JSON ARRAY LIST functions
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //picasso for getting images in one line
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
 repositories {
     mavenCentral()

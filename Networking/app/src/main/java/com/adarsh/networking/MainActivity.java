@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -89,7 +91,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
 
-                final ArrayList<Details> users = parseJson(response.body().string());
+                //final ArrayList<Details> users = parseJson(response.body().string());
+
+                //Method 2 -> parsing JSON using GSON
+                Gson gson = new Gson();
+                final ApiResult apiResult = gson.fromJson(response.body().string(), ApiResult.class);
 
                 //To make changes now in Ui thread, like progressUpdate in async
                 MainActivity.this.runOnUiThread(new Runnable() {
@@ -98,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
                         RecyclerView rv = findViewById(R.id.rv);
                         rv.setLayoutManager(new LinearLayoutManager(getBaseContext()));
-                        rv.setAdapter(new DetailsAdapter(users));
+                        rv.setAdapter(new DetailsAdapter( apiResult.getItems()));
                     }
                 });
             }
@@ -153,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
               }
     }
 
+
+    //1 Method -> parsing JSON manually
     ArrayList<Details> parseJson(String s){
         ArrayList<Details> users = new ArrayList<>();
 

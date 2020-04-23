@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_individual.view.*
 
 class DetailsAdapter(private val users:ArrayList<Details>) : RecyclerView.Adapter<DetailsAdapter
@@ -26,6 +27,7 @@ class DetailsAdapter(private val users:ArrayList<Details>) : RecyclerView.Adapte
             itemView?.login.text = userAlone.login
             itemView.userId.text = userAlone.id.toString()
             itemView.html_link.text = userAlone.html_url
+            Picasso.get().load(userAlone.avatar_url).into(itemView.img);
         }
     }
 
