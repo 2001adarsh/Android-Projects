@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,6 +25,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
@@ -49,17 +56,60 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateData(){
         //Make the network call here
-        NetworkTask networkTask = new NetworkTask();
+        //NetworkTask networkTask = new NetworkTask(); -used for asyncTask
         String source ="https://api.github.com/search/users?q=";
 
         if(editText.getText().toString()!= null)
         {
             String pass = source + editText.getText().toString();
-            networkTask.execute(pass);
+            // networkTask.execute(pass);   --- used for AsyncTask
+            UsingOkHttp(pass);
         }
     }
 
-    class NetworkTask extends AsyncTask<String, Void, String>{
+
+    // 2 method -> using OkHttp
+    private void UsingOkHttp(String url){
+        OkHttpClient client = new OkHttpClient();
+        final Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        /* execute here is done for Synchronous task. THat is, It will run in main Thread.
+        try (Response response = client.newCall(request).execute()) {
+            return response.body().string();
+        */
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+            }
+
+            //Similar to doInBackground method. Doesn't run on UI method
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+
+                final ArrayList<Details> users = parseJson(response.body().string());
+
+                //To make changes now in Ui thread, like progressUpdate in async
+                MainActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        RecyclerView rv = findViewById(R.id.rv);
+                        rv.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+                        rv.setAdapter(new DetailsAdapter(users));
+                    }
+                });
+            }
+
+        });
+
+    }
+
+
+    // 1 method -> using AsyncTask
+     class NetworkTask extends AsyncTask<String, Void, String>{
 
         RecyclerView rv = findViewById(R.id.rv);
         @Override
