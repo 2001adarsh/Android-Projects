@@ -22,13 +22,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(getBaseContext(), Main2Activity.class);
-
-                PendingIntent pit = PendingIntent.getActivity(getBaseContext(), 123, it,
-                        PendingIntent.FLAG_ONE_SHOT);
-                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                alarmManager.set(AlarmManager.ELAPSED_REALTIME,
-                        SystemClock.elapsedRealtime()+60000, pit);
 
             }
         });
